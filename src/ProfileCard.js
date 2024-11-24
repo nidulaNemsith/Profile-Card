@@ -1,5 +1,5 @@
 import './ProfileCard.css';
-
+import PropTypes from 'prop-types';
 function ProfileCard(props){
     return(
         <div className='profile-card'>
@@ -8,6 +8,12 @@ function ProfileCard(props){
             <p>{props.bio}</p>
         </div>
     );
+}
+
+ProfileCard.propTypes = {
+    imageUrl: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    bio: PropTypes.string.isRequired
 }
 
 
